@@ -1,0 +1,89 @@
+﻿<Page x:Class="LottieSamples.Scenarios.CodegenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:animatedvisuals="using:AnimatedVisuals"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+      xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <!--#region IntroText-->
+            <StackPanel Style="{StaticResource IntroTextContainer}">
+                <RichTextBlock>
+                    <Paragraph>
+                        While Lottie animations on other platforms require you to use a json file,
+                        Lottie-Windows allows you to use a codegen'ed class which provides better performance.
+                        You'll need to
+                        <Span FontWeight="SemiBold">include</Span>:
+                        <LineBreak />
+                    </Paragraph>
+                </RichTextBlock>
+                <RichTextBlock Style="{StaticResource IndentedText}">
+                    <Paragraph>
+                        &#x2022;
+                        <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.UI.Xaml/">
+                            <Span FontFamily="Consolas">Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer</Span>
+                        </Hyperlink>
+                    </Paragraph>
+                    <Paragraph>
+                        &#x2022;
+                        <Hyperlink NavigateUri="https://www.nuget.org/packages/Win2D.uwp/">
+                            <Span FontFamily="Consolas">Microsoft.Graphics.Canvas</Span>
+                        </Hyperlink>
+                        if codegen-ing C#.
+                    </Paragraph>
+                    <Paragraph>
+                        &#x2022;
+                        <Span FontFamily="Consolas">AnimatedVisuals/LottieLogo1.cs</Span>
+                        which was generated from
+                        <Span FontFamily="Consolas">LottieLogo1.json</Span> using either the
+                        <Hyperlink NavigateUri="https://aka.ms/lottiegen">
+                            LottieGen CLI
+                        </Hyperlink>
+                        or
+                        <Hyperlink NavigateUri="https://aka.ms/lottieviewer">
+                            LottieViewer GUI
+                        </Hyperlink>.
+                        <LineBreak/>
+                    </Paragraph>
+                </RichTextBlock>
+            </StackPanel>
+            <!--#endregion-->
+
+            <Border Style="{StaticResource LottiePlayer}">
+                <!--  AnimatedVisualPlayer with AutoPlay  -->
+                <winui:AnimatedVisualPlayer x:Name="Codegen_Player">
+                    <!--  Codegen source with C# class: AnimatedVisuals/LottieLogo1.cs  -->
+                    <!--<animatedvisuals:LottieLogo1 />-->
+                    <lottie:LottieVisualSource UriSource="ms-appx:///Assets/LottieLogo1.json" />
+
+                </winui:AnimatedVisualPlayer>
+            </Border>
+
+            <!--#region OutroText-->
+            <RichTextBlock Style="{StaticResource OutroTextBlock}">
+                <Paragraph>
+                    To learn more, check out the
+                    <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/CodegenPage.xaml">
+                        XAML
+                    </Hyperlink>
+                    and read
+                    <Hyperlink NavigateUri="https://docs.microsoft.com/windows/communitytoolkit/animations/lottie-scenarios/getting_started_codegen">
+                        this tutorial
+                    </Hyperlink>
+                    on using codegen classes with Lottie-Windows and a comparison of the
+                    <Hyperlink NavigateUri="https://docs.microsoft.com/windows/communitytoolkit/animations/lottie-scenarios/json_codegen">
+                        JSON v/s Codegen
+                    </Hyperlink>
+                    approaches.
+                    <LineBreak />
+                </Paragraph>
+            </RichTextBlock>
+            <!--#endregion-->
+        </StackPanel>
+    </Grid>
+</Page>
