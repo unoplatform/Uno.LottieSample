@@ -5,14 +5,16 @@
       xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+      xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:not_win="http://uno.ui/not_win"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      mc:Ignorable="d">
+      mc:Ignorable="d not_win">
 
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <!--#region IntroText-->
             <StackPanel Style="{StaticResource IntroTextContainer}">
-                <RichTextBlock>
+                <win:RichTextBlock>
                     <Paragraph>
                         <Span>To render our first Lottie animation, we use</Span>
                         <Span FontFamily="Consolas">Assets/LottieLogo1.json</Span>
@@ -22,8 +24,19 @@
                         <Span FontWeight="SemiBold">include</Span>:
                         <LineBreak />
                     </Paragraph>
-                </RichTextBlock>
-                <RichTextBlock Style="{StaticResource IndentedText}">
+                </win:RichTextBlock>
+                <not_win:TextBlock TextWrapping="WrapWholeWords">
+                    <Run FontWeight="Bold">FOR UWP:</Run>
+                    <Run>To render our first Lottie animation, we use</Run>
+                    <Run FontFamily="Consolas">Assets/LottieLogo1.json</Run>
+                    which was generated from Adobe AfterEffects using
+                    <Hyperlink NavigateUri="http://aescripts.com/bodymovin/">Bodymovin</Hyperlink> .
+                    <LineBreak />
+                    You'll need to
+                    <Run FontWeight="SemiBold">include</Run> :
+                    <LineBreak />
+                </not_win:TextBlock>
+                <win:RichTextBlock Style="{StaticResource IndentedText}">
                     <Paragraph>
                         &#x2022;
                         <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.UI.Xaml/">
@@ -37,7 +50,37 @@
                         </Hyperlink>
                         <LineBreak />
                     </Paragraph>
-                </RichTextBlock>
+                </win:RichTextBlock>
+                <not_win:TextBlock Style="{StaticResource IndentedText2}">
+                    &#x2022;
+                    <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.UI.Xaml/">
+                        <Run FontFamily="Consolas">Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer</Run>
+                    </Hyperlink>
+                    &#x2022;
+                    <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI.Lottie/">
+                        <Run FontFamily="Consolas">Microsoft.Toolkit.Uwp.UI.Lottie</Run>
+                    </Hyperlink>
+                    <LineBreak />
+                </not_win:TextBlock>
+                <not_win:TextBlock TextWrapping="WrapWholeWords">
+                    <LineBreak />
+                    <Run FontWeight="Bold">FOR UNO:</Run>
+                    <Run>To render our first Lottie animation, we use</Run>
+                    <Run FontFamily="Consolas">Assets/LottieLogo1.json</Run>
+                    which was generated from Adobe AfterEffects using
+                    <Hyperlink NavigateUri="http://aescripts.com/bodymovin/">Bodymovin</Hyperlink> .
+                    <LineBreak />
+                    You'll need to
+                    <Run FontWeight="SemiBold">include</Run> :
+                    <LineBreak />
+                </not_win:TextBlock>
+                <not_win:TextBlock Style="{StaticResource IndentedText2}">
+                    &#x2022;
+                    <Hyperlink NavigateUri="https://www.nuget.org/packages/Uno.UI.Lottie/">
+                        <Run FontFamily="Consolas">Uno.UI.Lottie</Run>
+                    </Hyperlink>
+                    <LineBreak />
+                </not_win:TextBlock>
             </StackPanel>
             <!--#endregion-->
 
@@ -51,7 +94,7 @@
             </Border>
 
             <!--#region OutroText-->
-            <RichTextBlock Style="{StaticResource OutroTextBlock}">
+            <win:RichTextBlock Style="{StaticResource OutroTextBlock}">
                 <Paragraph>
                     To learn more, check out the
                     <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/JsonPage.xaml">
@@ -63,7 +106,18 @@
                     </Hyperlink>
                     on using JSON files with Lottie-Windows.
                 </Paragraph>
-            </RichTextBlock>
+            </win:RichTextBlock>
+            <not_win:TextBlock Style="{StaticResource OutroTextBlock2}">
+                To learn more, check out the
+                <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/JsonPage.xaml">
+                    XAML
+                </Hyperlink>
+                and read
+                <Hyperlink NavigateUri="https://docs.microsoft.com/windows/communitytoolkit/animations/lottie-scenarios/getting_started_json">
+                    this tutorial
+                </Hyperlink>
+                on using JSON files with Lottie-Windows.
+            </not_win:TextBlock>
             <!--#endregion-->
         </StackPanel>
     </Grid>

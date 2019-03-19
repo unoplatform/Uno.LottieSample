@@ -6,13 +6,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:winui="using:Microsoft.UI.Xaml.Controls"
       xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie"
+      xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:not_win="http://uno.ui/not_win"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      mc:Ignorable="d">
+      mc:Ignorable="d not_win">
 
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <!--#region IntroText-->
-            <RichTextBlock Style="{StaticResource IntroTextBlock}">
+            <win:RichTextBlock Style="{StaticResource IntroTextBlock}">
                 <Paragraph>
                     This example demonstrates how to configure
                     <Span FontFamily="Consolas">AnimatedVisualPlayer</Span>'s playback in response to user interaction.
@@ -21,7 +23,16 @@
                     play, pause, stop, and reverse the Lottie animation.
                     <LineBreak />
                 </Paragraph>
-            </RichTextBlock>
+            </win:RichTextBlock>
+            <not_win:TextBlock Style="{StaticResource IntroTextBlock2}">
+                This example demonstrates how to configure
+                <Span FontFamily="Consolas">AnimatedVisualPlayer</Span> 's playback in response to user interaction.
+                <Span FontWeight="SemiBold">Press</Span>
+                the buttons below to
+                    play, pause, stop, and reverse the Lottie animation.
+                <LineBreak />
+            </not_win:TextBlock>
+
             <!--#endregion-->
 
             <Border Style="{StaticResource LottiePlayer}">
@@ -80,7 +91,7 @@
             </Grid>
 
             <!--#region OutroText-->
-            <RichTextBlock Style="{StaticResource OutroTextBlock}">
+            <win:RichTextBlock Style="{StaticResource OutroTextBlock}">
                 <Paragraph>
                     To learn more, check out the
                     <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/PlaybackPage.xaml">
@@ -97,7 +108,24 @@
                     </Hyperlink>
                     on configuring animation playback.
                 </Paragraph>
-            </RichTextBlock>
+            </win:RichTextBlock>
+            <not_win:TextBlock Style="{StaticResource OutroTextBlock2}">
+                To learn more, check out the
+                <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/PlaybackPage.xaml">
+                    XAML
+                </Hyperlink>
+                +
+                <Hyperlink NavigateUri="https://github.com/windows-toolkit/Lottie-Windows/blob/master/samples/LottieSamples/Scenarios/PlaybackPage.xaml.cs">
+                    code-behind
+                </Hyperlink>
+                ,
+                    and read
+                <Hyperlink NavigateUri="https://docs.microsoft.com/windows/communitytoolkit/animations/lottie-scenarios/playback">
+                    this tutorial
+                </Hyperlink>
+                on configuring animation playback.
+            </not_win:TextBlock>
+
             <!--#endregion-->
         </StackPanel>
     </Grid>

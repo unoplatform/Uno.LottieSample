@@ -6,11 +6,16 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:winui="using:Microsoft.UI.Xaml.Controls"
       xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie"
+      xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:not_win="http://uno.ui/not_win"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-      mc:Ignorable="d">
+      mc:Ignorable="d not_win">
 
     <Grid>
-        <StackPanel VerticalAlignment="Center">
+        <not_win:TextBlock>
+            This feature is not supported by Uno.UI.Lottie.
+        </not_win:TextBlock>
+        <win:StackPanel VerticalAlignment="Center">
             <!--#region IntroText-->
             <StackPanel Style="{StaticResource IntroTextContainer}">
                 <RichTextBlock>
@@ -84,6 +89,6 @@
                 </Paragraph>
             </RichTextBlock>
             <!--#endregion-->
-        </StackPanel>
+        </win:StackPanel>
     </Grid>
 </Page>

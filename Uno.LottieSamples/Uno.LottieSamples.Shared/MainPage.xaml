@@ -34,7 +34,7 @@
                     </NavigationViewItem.Content>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="codegen">
+                <!--<NavigationViewItem Tag="codegen">
                     <NavigationViewItem.Content>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource NavViewNumberedItem}"
@@ -45,13 +45,13 @@
                             </TextBlock>
                         </StackPanel>
                     </NavigationViewItem.Content>
-                </NavigationViewItem>
+                </NavigationViewItem>-->
 
                 <NavigationViewItem Tag="playback">
                     <NavigationViewItem.Content>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource NavViewNumberedItem}"
-                                       Text="3" />
+                                       Text="2" />
                             <TextBlock>
                                 <Run>Configuring Animation</Run>
                                 <Run FontWeight="SemiBold">Playback</Run>
@@ -64,7 +64,7 @@
                     <NavigationViewItem.Content>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource NavViewNumberedItem}"
-                                       Text="4" />
+                                       Text="3" />
                             <TextBlock>
                                 <Run>Displaying Individuals</Run>
                                 <Run FontWeight="SemiBold">Frames</Run>
@@ -73,7 +73,7 @@
                     </NavigationViewItem.Content>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="segment">
+                <!--<NavigationViewItem Tag="segment">
                     <NavigationViewItem.Content>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Style="{StaticResource NavViewNumberedItem}"
@@ -128,7 +128,7 @@
                             </TextBlock>
                         </StackPanel>
                     </NavigationViewItem.Content>
-                </NavigationViewItem>
+                </NavigationViewItem>-->
             </NavigationView.MenuItems>
 
             <ScrollViewer>

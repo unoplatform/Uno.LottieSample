@@ -15,9 +15,22 @@
             <Setter Property="Width" Value="400" />
             <Setter Property="Margin" Value="0,40,0,20" />
         </Style>
+        <Style x:Key="IntroTextBlock2"
+               TargetType="TextBlock">
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Margin" Value="0,40,0,20" />
+            <Setter Property="TextWrapping" Value="WrapWholeWords" />
+        </Style>
 
         <Style x:Key="OutroTextBlock"
                TargetType="RichTextBlock">
+            <Setter Property="Width" Value="400" />
+            <Setter Property="TextWrapping" Value="WrapWholeWords" />
+            <Setter Property="Margin" Value="0,40,0,0" />
+        </Style>
+
+        <Style x:Key="OutroTextBlock2"
+               TargetType="TextBlock">
             <Setter Property="Width" Value="400" />
             <Setter Property="TextWrapping" Value="WrapWholeWords" />
             <Setter Property="Margin" Value="0,40,0,0" />
@@ -44,6 +57,12 @@
 
         <Style x:Key="IndentedText"
                TargetType="RichTextBlock">
+            <Setter Property="Padding" Value="20,0,0,0" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="TextWrapping" Value="WrapWholeWords" />
+        </Style>
+        <Style x:Key="IndentedText2"
+               TargetType="TextBlock">
             <Setter Property="Padding" Value="20,0,0,0" />
             <Setter Property="Width" Value="400" />
             <Setter Property="TextWrapping" Value="WrapWholeWords" />
