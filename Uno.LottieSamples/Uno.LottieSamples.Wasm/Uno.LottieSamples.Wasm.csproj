@@ -31,8 +31,8 @@
     <Content Include="LinkerConfig.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.44.0-dev.977" />
-    <PackageReference Include="Uno.UI.Lottie" Version="1.44.0-dev.977" />
+    <PackageReference Include="Uno.UI" Version="1.44.0-dev.1051" />
+    <PackageReference Include="Uno.UI.Lottie" Version="1.44.0-dev.1051" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.137" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.137" />
   </ItemGroup>
