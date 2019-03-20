@@ -50,16 +50,6 @@ jobs:
       OverWrite: false
       flattenFolders: false
 
-  - task: CopyFiles@2
-    displayName: 'Publish Windows Binaries'
-    inputs:
-      SourceFolder: $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.UWP/AppPackages
-      Contents: '**/*.appx'
-      TargetFolder: $(build.artifactstagingdirectory)/Uno-Lottie-windows
-      CleanTargetFolder: false
-      OverWrite: false
-      flattenFolders: false
-
   - task: PublishBuildArtifacts@1
     # https://developercommunity.visualstudio.com/content/problem/284991/public-vsts-previouw-cant-set-build-number-of-pr-b.html
     condition: eq(variables['System.PullRequest.IsFork'], 'False')
