@@ -43,7 +43,7 @@ jobs:
   - task: CopyFiles@2
     displayName: 'Publish Wasm Binaries'
     inputs:
-      SourceFolder: $(build.sourcesdirectory)/Uno.LottieSamples/Uno.LottieSamples.Wasm/bin/Release/netstandard2.0/dist
+      SourceFolder: $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.Wasm/bin/Release/netstandard2.0/dist
       Contents: '**/*.*'
       TargetFolder: $(build.artifactstagingdirectory)/Uno-Lottie-wasm
       CleanTargetFolder: false
