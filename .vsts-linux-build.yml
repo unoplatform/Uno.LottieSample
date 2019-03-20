@@ -24,7 +24,7 @@ jobs:
 
   - bash: |
       source /emsdk/emsdk_env.sh
-      msbuild /r /p:Configuration=Release /p:MixedModeBuild=$(MixedModeBuild) $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.Wasm.csproj /bl:$(build.artifactstagingdirectory)\build.binlog
+      msbuild /r /p:Configuration=Release /p:MixedModeBuild=$(MixedModeBuild) $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.Wasm/Uno.LottieSamples.Wasm.csproj /bl:$(build.artifactstagingdirectory)\build.binlog
 
   - task: CopyFiles@2
     displayName: 'Publish Wasm Binaries'
