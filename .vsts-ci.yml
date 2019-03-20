@@ -1,5 +1,9 @@
-jobs:
+resources:
+  containers:
+  - container: nv-bionic-wasm
+    image: nventive/wasm-build:1.0-bionic
 
+jobs:
 - template: .vsts-win-build.yml
   parameters:
     name: Windows
