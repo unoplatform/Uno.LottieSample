@@ -53,7 +53,7 @@ jobs:
   - task: CopyFiles@2
     displayName: 'Publish Windows Binaries'
     inputs:
-      SourceFolder: $(build.sourcesdirectory)/Uno.LottieSamples/Uno.LottieSamples.UWP/AppPackages
+      SourceFolder: $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.UWP/AppPackages
       Contents: '**/*.appx'
       TargetFolder: $(build.artifactstagingdirectory)/Uno-Lottie-windows
       CleanTargetFolder: false
