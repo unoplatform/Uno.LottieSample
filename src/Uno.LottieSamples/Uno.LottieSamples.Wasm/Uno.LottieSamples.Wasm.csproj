@@ -6,7 +6,8 @@
     <WasmHead>true</WasmHead>
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
     <NoWarn>NU1701</NoWarn>
-    <MonoRuntimeDebuggerEnabled>true</MonoRuntimeDebuggerEnabled>
+    <MonoRuntimeDebuggerEnabled Condition="'$(Configuration)'=='Debug'">true</MonoRuntimeDebuggerEnabled>
+    <WasmShellMonoRuntimeExecutionMode Condition="$([MSBuild]::IsOsPlatform('Linux'))">FullAOT</WasmShellMonoRuntimeExecutionMode>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="..\Uno.LottieSamples.UWP\Assets\*.png" Link="Assets\%(FileName)%(Extension)" />
@@ -33,8 +34,8 @@
   <ItemGroup>
     <PackageReference Include="Uno.UI" Version="1.44.0-dev.1051" />
     <PackageReference Include="Uno.UI.Lottie" Version="1.44.0-dev.1051" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.137" />
-    <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.137" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.223" />
+    <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.223" />
   </ItemGroup>
   <Import Project="..\Uno.LottieSamples.Shared\Uno.LottieSamples.Shared.projitems" Label="Shared" Condition="Exists('..\Uno.LottieSamples.Shared\Uno.LottieSamples.Shared.projitems')" />
 </Project>

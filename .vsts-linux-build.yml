@@ -1,0 +1,45 @@
+parameters:
+  pool: ''
+
+jobs:
+- job: linux
+  container: nv-bionic-wasm
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+
+  variables:
+    NUGET_PACKAGES: $(build.sourcesdirectory)/.nuget
+
+  steps:
+  - checkout: self
+    clean: true
+  
+  - bash: |
+      sudo chmod -R 777 /emsdk
+      cd /emsdk
+      sudo ./emsdk activate sdk-1.38.28-64bit
+
+    displayName: 'Setup Enscripten'
+
+  - bash: |
+      source /emsdk/emsdk_env.sh
+      msbuild /r /p:Configuration=Release /p:MixedModeBuild=$(MixedModeBuild) $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.Wasm/Uno.LottieSamples.Wasm.csproj /bl:$(build.artifactstagingdirectory)\build.binlog
+
+  - task: CopyFiles@2
+    displayName: 'Publish Wasm Binaries'
+    inputs:
+      SourceFolder: $(build.sourcesdirectory)/src/Uno.LottieSamples/Uno.LottieSamples.Wasm/bin/Release/netstandard2.0/dist
+      Contents: '**/*.*'
+      TargetFolder: $(build.artifactstagingdirectory)/Uno-Lottie-wasm/$(RuntimeMode)
+      CleanTargetFolder: false
+      OverWrite: false
+      flattenFolders: false
+
+  - task: PublishBuildArtifacts@1
+    # https://developercommunity.visualstudio.com/content/problem/284991/public-vsts-previouw-cant-set-build-number-of-pr-b.html
+    condition: eq(variables['System.PullRequest.IsFork'], 'False')
+    inputs:
+      PathtoPublish: $(build.artifactstagingdirectory)
+      ArtifactName: xaml-gallery-aot-drop
+      ArtifactType: Container
