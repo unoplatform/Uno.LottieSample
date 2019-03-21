@@ -3,10 +3,16 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:banner="using:Uno.UI.Sample.Banner"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       mc:Ignorable="d">
 
-    <Grid>
+    <banner:BannerControl
+        LinkToUnoPlatformApp="https://github.com/nventive/Uno.LottieSample"
+        LinkToOriginalApp="https://github.com/windows-toolkit/Lottie-Windows/tree/master/samples"
+        AppName="Lottie Samples"
+        AppAuthor="Windows Toolkit">
+
         <NavigationView x:Name="NavView"
                         IsBackButtonVisible="Collapsed"
                         IsBackEnabled="False"
@@ -151,5 +157,5 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-    </Grid>
+    </banner:BannerControl>
 </Page>

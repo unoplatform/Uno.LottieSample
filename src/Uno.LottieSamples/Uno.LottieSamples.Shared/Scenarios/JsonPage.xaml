@@ -26,7 +26,6 @@
                     </Paragraph>
                 </win:RichTextBlock>
                 <not_win:TextBlock TextWrapping="WrapWholeWords">
-                    <Run FontWeight="Bold">FOR UWP:</Run>
                     <Run>To render our first Lottie animation, we use</Run>
                     <Run FontFamily="Consolas">Assets/LottieLogo1.json</Run>
                     which was generated from Adobe AfterEffects using
@@ -37,6 +36,10 @@
                     <LineBreak />
                 </not_win:TextBlock>
                 <win:RichTextBlock Style="{StaticResource IndentedText}">
+                    <Paragraph>
+                        <Span FontWeight="Bold">FOR UWP:</Span>
+                        <LineBreak />
+                    </Paragraph>
                     <Paragraph>
                         &#x2022;
                         <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.UI.Xaml/">
@@ -50,31 +53,33 @@
                         </Hyperlink>
                         <LineBreak />
                     </Paragraph>
+                    <Paragraph>
+                        <Span FontWeight="Bold">FOR UNO:</Span>
+                        <LineBreak />
+                    </Paragraph>
+                    <Paragraph>
+                        &#x2022;
+                        <Hyperlink NavigateUri="https://www.nuget.org/packages/Uno.UI.Lottie/">
+                            <Span FontFamily="Consolas">Uno.UI.Lottie</Span>
+                        </Hyperlink>
+                        <LineBreak />
+                    </Paragraph>
                 </win:RichTextBlock>
                 <not_win:TextBlock Style="{StaticResource IndentedText2}">
+                    <Run FontWeight="Bold">FOR UWP:</Run>
+                    <LineBreak />
                     &#x2022;
                     <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.UI.Xaml/">
                         <Run FontFamily="Consolas">Microsoft.UI.Xaml.Controls.AnimatedVisualPlayer</Run>
                     </Hyperlink>
+                    <LineBreak />
                     &#x2022;
                     <Hyperlink NavigateUri="https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.UI.Lottie/">
                         <Run FontFamily="Consolas">Microsoft.Toolkit.Uwp.UI.Lottie</Run>
                     </Hyperlink>
                     <LineBreak />
-                </not_win:TextBlock>
-                <not_win:TextBlock TextWrapping="WrapWholeWords">
-                    <LineBreak />
                     <Run FontWeight="Bold">FOR UNO:</Run>
-                    <Run>To render our first Lottie animation, we use</Run>
-                    <Run FontFamily="Consolas">Assets/LottieLogo1.json</Run>
-                    which was generated from Adobe AfterEffects using
-                    <Hyperlink NavigateUri="http://aescripts.com/bodymovin/">Bodymovin</Hyperlink> .
                     <LineBreak />
-                    You'll need to
-                    <Run FontWeight="SemiBold">include</Run> :
-                    <LineBreak />
-                </not_win:TextBlock>
-                <not_win:TextBlock Style="{StaticResource IndentedText2}">
                     &#x2022;
                     <Hyperlink NavigateUri="https://www.nuget.org/packages/Uno.UI.Lottie/">
                         <Run FontFamily="Consolas">Uno.UI.Lottie</Run>

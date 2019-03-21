@@ -10,6 +10,9 @@
 			-->
       <Version>6.2.2</Version>
     </PackageReference>
+    <PackageReference Include="Uno.UI.Sample.Banner">
+      <Version>1.44.0-dev.16</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
