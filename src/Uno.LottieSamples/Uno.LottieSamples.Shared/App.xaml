@@ -70,7 +70,7 @@
 
         <Style x:Key="NavViewNumberedItem"
                TargetType="TextBlock">
-            <Setter Property="Padding" Value="0,0,24,0" />
+            <Setter Property="Margin" Value="0,0,24,0" />
         </Style>
 
     </Application.Resources>
