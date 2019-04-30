@@ -32,11 +32,11 @@
     <Content Include="LinkerConfig.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.UI" Version="1.44.0-dev.1067" />
-    <PackageReference Include="Uno.UI.Lottie" Version="1.44.0-dev.1067" />
+    <PackageReference Include="Uno.UI" Version="1.45.0-dev.1366" />
+    <PackageReference Include="Uno.UI.Lottie" Version="1.45.0-dev.1366" />
     <PackageReference Include="Uno.UI.Sample.Banner" Version="1.44.0-dev.16" />
-    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.225" />
-    <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.225" />
+    <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.0-dev.265" />
+    <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.0-dev.265" />
   </ItemGroup>
   <Import Project="..\Uno.LottieSamples.Shared\Uno.LottieSamples.Shared.projitems" Label="Shared" Condition="Exists('..\Uno.LottieSamples.Shared\Uno.LottieSamples.Shared.projitems')" />
 </Project>
